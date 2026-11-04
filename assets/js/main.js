@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsFilter();
   initCaseStudyModal();
   initLightboxViewer();
+  initInteractiveShowcase();
   initContactForm();
   initClipboardHelpers();
 });
@@ -716,12 +717,67 @@ function initLightboxViewer() {
   // Attach click listener to all gallery image boxes and thumbnail cards
   const boxes = document.querySelectorAll('.gallery-image-box, .gallery-thumb-box');
   boxes.forEach(box => {
-    box.addEventListener('click', () => {
+    box.addEventListener('click', (e) => {
+      // If clicking stage box directly
       const img = box.querySelector('img');
-      const caption = box.querySelector('.img-caption span')?.textContent || box.querySelector('.thumb-title')?.textContent || img.alt;
+      const caption = document.getElementById('showcase-stage-caption')?.textContent || box.querySelector('.img-caption span')?.textContent || box.querySelector('.thumb-title')?.textContent || img.alt;
       if (img && img.src) {
         openLightbox(img.src, caption);
       }
+    });
+  });
+}
+
+/* ==========================================================================
+   8. Apple-Style Interactive 8-Screen Showcase Switcher
+   ========================================================================== */
+function initInteractiveShowcase() {
+  const tabs = document.querySelectorAll('.showcase-tab-btn');
+  const thumbs = document.querySelectorAll('.filmstrip-thumb');
+  const stageImg = document.getElementById('showcase-stage-img');
+  const stageCaption = document.getElementById('showcase-stage-caption');
+  const stageMetric = document.getElementById('showcase-stage-metric');
+  const windowPath = document.getElementById('showcase-window-path');
+
+  if (!tabs.length || !stageImg) return;
+
+  function setScreen(index) {
+    const tab = tabs[index];
+    if (!tab) return;
+
+    tabs.forEach(t => t.classList.remove('active'));
+    thumbs.forEach(th => th.classList.remove('active'));
+
+    tab.classList.add('active');
+    if (thumbs[index]) thumbs[index].classList.add('active');
+
+    const src = tab.getAttribute('data-img');
+    const caption = tab.getAttribute('data-caption');
+    const metric = tab.getAttribute('data-metric');
+    const path = tab.getAttribute('data-path') || 'production-live';
+
+    stageImg.style.opacity = '0';
+    setTimeout(() => {
+      stageImg.src = src;
+      stageImg.alt = caption;
+      if (stageCaption) stageCaption.textContent = caption;
+      if (stageMetric) stageMetric.textContent = metric;
+      if (windowPath) windowPath.innerHTML = `marketplace.telematics.internal / <span style="color:#ffffff;">${path}</span>`;
+      stageImg.style.opacity = '1';
+    }, 140);
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setScreen(index);
+    });
+  });
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener('click', (e) => {
+      // Switch screen but don't prevent Lightbox on double tap if desired
+      setScreen(index);
     });
   });
 }
