@@ -202,7 +202,7 @@ const CASE_STUDY_DATA = {
       'Partner onboarding and discovery-to-close sales enablement framework'
     ],
     links: {
-      prototype: 'https://kinjal106.github.io/setu/',
+      prototype: null,
       walkthrough: null,
       prd: null
     }
@@ -713,12 +713,12 @@ function initLightboxViewer() {
     }
   });
 
-  // Attach click listener to all gallery image boxes
-  const boxes = document.querySelectorAll('.gallery-image-box');
+  // Attach click listener to all gallery image boxes and thumbnail cards
+  const boxes = document.querySelectorAll('.gallery-image-box, .gallery-thumb-box');
   boxes.forEach(box => {
     box.addEventListener('click', () => {
       const img = box.querySelector('img');
-      const caption = box.querySelector('.img-caption span')?.textContent || img.alt;
+      const caption = box.querySelector('.img-caption span')?.textContent || box.querySelector('.thumb-title')?.textContent || img.alt;
       if (img && img.src) {
         openLightbox(img.src, caption);
       }
