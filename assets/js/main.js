@@ -157,6 +157,56 @@ function initSkillsFilter() {
    4. Case Study Deep Dive Modal System
    ========================================================================== */
 const CASE_STUDY_DATA = {
+  'telematics-marketplace': {
+    title: 'B2B Fleet-Telematics & IoT Marketplace',
+    subtitle: 'Commercial Product Case Study • Shipped to Production (Confidential / NDA)',
+    badge: 'Live Shipped Product • ₹3.2 Cr Revenue',
+    disclaimer: 'Confidentiality Notice: This is live freelance and founding team commercial work protected under NDA. Company and platform brand names have been sanitized to protect client confidentiality.',
+    problem: `
+      In the B2B fleet-telematics and commercial IoT ecosystem, system integrators (SIs) and fleet operators faced intense procurement friction: opaque pricing with no volume slabs, fragmented hardware manufacturers with unverified compliance (AIS-140/ARAI), complex GST invoicing, and lack of credit terms. Furthermore, after meetings and partner discovery calls, recurring gaps emerged around warranty tracking, trust, and post-purchase checkout.
+    `,
+    research: `
+      <ul>
+        <li><strong>Discovery Calls & Partner Feedback:</strong> Conducted 120+ daily outbound dials and dozens of discovery calls with system integrators and fleet operators to diagnose buyer friction.</li>
+        <li><strong>Support Ticket Analysis:</strong> Reviewed recurring customer complaints and support tickets; uncovered that deals stalled due to warranty ambiguity, unverified seller credibility, and manual quotation delays.</li>
+        <li><strong>Conversion Bottleneck:</strong> Identified that buyers needed instant tiered volume pricing (1-10, 11-100, 101+ units), 1-click GST-compliant invoices, and integrated B2B credit lines to close high-ticket orders without 30-day procurement lag.</li>
+      </ul>
+    `,
+    prioritization: `
+      On my own initiative, authored a comprehensive PRD with 12 prioritized requirements (P0/P1), user stories, and acceptance criteria. Prioritized the B2B checkout engine, GST validation, and verified seller badges as P0, while scoping warranty tracking and automated FASTag replenishment as fast-follow iterations.
+    `,
+    solution: `
+      <ul>
+        <li><strong>Clickable Prototype to Shipped Design:</strong> Built the first clickable prototype myself; the engineering UI team used this exact reference to build and ship the final production marketplace.</li>
+        <li><strong>Tiered Volume Pricing Slabs:</strong> Transparent price drops per quantity tier (e.g. ₹660 -> ₹645 -> ₹630 for fleet scale) directly on product cards.</li>
+        <li><strong>GST-Ready B2B Checkout:</strong> Seamless order summary with automated 18% GST calculation, GSTIN verification, and multi-address support.</li>
+        <li><strong>Integrated Financing & Credit Line:</strong> Embedded B2B credit line (QUID / Juspay) allowing fleet managers to place bulk orders up to pre-approved credit limits.</li>
+        <li><strong>Post-Launch Iterations:</strong> Introduced AI search, improved multi-attribute filters, WhatsApp support bot, and FASTag axle-calculation workflows.</li>
+      </ul>
+    `,
+    metrics: `
+      <ul>
+        <li><strong>Revenue Impact:</strong> Contributed to closing ~₹3.2 Cr in business revenue over ~6 months (1 of 3 founding team members).</li>
+        <li><strong>Largest Enterprise Deal:</strong> Closed an individual ₹66,08,000 deal (~₹66 Lakhs / TT E-Lock 7H enterprise procurement).</li>
+        <li><strong>Partner Acquisition:</strong> 50+ system integrators onboarded through consultative demos.</li>
+        <li><strong>Account Retention:</strong> 60 active customer accounts supported with 0 cancellations (0% churn).</li>
+        <li><strong>A/B Testing:</strong> Ran weekly messaging tests yielding a 35% lift in qualified meetings and 6% lift in reply rates.</li>
+      </ul>
+    `,
+    deliverables: [
+      'Self-initiated PRD covering 12 prioritized functional requirements (P0/P1)',
+      'First clickable prototype used as the reference by engineering UI team',
+      'Production-shipped B2B marketplace: catalog, bulk slabs, GST checkout, credit line',
+      'Monetization Sales Dashboard tracking ~₹53L/month run-rate and category revenue',
+      'Partner onboarding and discovery-to-close sales enablement framework'
+    ],
+    links: {
+      prototype: null,
+      walkthrough: null,
+      prd: null
+    }
+  },
+
   'fireflies': {
     title: 'Commitment Cards: Fireflies.ai',
     subtitle: 'Academic Capstone Project • 14 Days • Full 9-Step PM Framework',
@@ -437,7 +487,7 @@ function initCaseStudyModal() {
     }
 
     if (!actionsHtml) {
-      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);">Detailed slide deck & PRD available upon request.</span>`;
+      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Work conducted under Non-Disclosure Agreement (NDA). Detailed workflows and specs available upon discussion.</span>`;
     }
 
     footerActions.innerHTML = actionsHtml;
