@@ -299,7 +299,8 @@ const CASE_STUDY_DATA = {
     links: {
       prototype: null,
       walkthrough: null,
-      prd: null
+      prd: null,
+      drive: 'https://drive.google.com/drive/folders/1rIzEcnZ0xjpjdly0ufFX32RzvtFI2Ymj?usp=sharing'
     }
   },
 
@@ -347,7 +348,8 @@ const CASE_STUDY_DATA = {
     links: {
       prototype: null,
       walkthrough: null,
-      prd: null
+      prd: null,
+      drive: 'https://drive.google.com/drive/folders/1Mhw-GRTe4l4HuhK_TYTQovmaXfUU87gH?usp=sharing'
     }
   },
 
@@ -393,7 +395,8 @@ const CASE_STUDY_DATA = {
     links: {
       prototype: null,
       walkthrough: null,
-      prd: null
+      prd: null,
+      drive: 'https://drive.google.com/drive/folders/1hetLCQZM70tPiogdgZEg6RabS2j36DfJ?usp=sharing'
     }
   }
 };
@@ -485,6 +488,9 @@ function initCaseStudyModal() {
     }
     if (data.links.prd) {
       actionsHtml += `<a href="${data.links.prd}" download class="btn btn-secondary btn-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Download Capstone PRD</a>`;
+    }
+    if (data.links.drive) {
+      actionsHtml += `<a href="${data.links.drive}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> View Drive Artifacts</a>`;
     }
 
     if (!actionsHtml) {
