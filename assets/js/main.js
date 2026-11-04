@@ -5,6 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavbar();
   initAnimatedCounters();
   initSkillsFilter();
@@ -14,6 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initClipboardHelpers();
 });
+
+/* ==========================================================================
+   0. Theme Switcher (Default: Light Mode with LocalStorage Sync)
+   ========================================================================== */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  
+  // Set default theme to light mode as requested
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const active = document.documentElement.getAttribute('data-theme') || 'light';
+      const nextTheme = active === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    });
+  }
+}
 
 /* ==========================================================================
    1. Navbar & Scroll Behavior
