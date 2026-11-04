@@ -17,10 +17,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://jayeshpariharr.github.io/portfolio./assets/images/jayesh-parihar-square.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter & Plus Jakarta Sans (Silicon Valley / Apple Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -812,69 +812,96 @@
               Founding Team &amp; Freelance Product Contribution: Led customer discovery, wrote the PRD, built the reference prototype, and contributed to closing ₹3.2 Cr in revenue with 0% churn across 60 accounts.
             </p>
 
-            <!-- Visual Showcase Gallery: Top 3 Main Screens -->
-            <div class="gallery-preview-grid">
-              <!-- Left Big Box: Real Monetization Dashboard -->
-              <div class="gallery-image-box" style="min-height: 280px;" title="Click to view enlarged high-definition screenshot">
-                <img src="assets/images/marketplace-sales-dashboard.png" alt="Monetization Sales Dashboard showing category distribution and revenue" loading="lazy">
-                <div class="img-caption">
-                  <span>Monetization &amp; Sales Dashboard (₹2.47 Cr Tracked • Peak ₹82.58L Month)</span>
-                  <span style="font-size:0.72rem; color:#38bdf8;">🔍 Click to Zoom</span>
+            <!-- Apple-Style Interactive Device Stage (All 8 Production Views) -->
+            <div class="interactive-showcase-box">
+              <!-- Window Header -->
+              <div class="showcase-window-header">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                  <span class="window-title" id="showcase-window-path">marketplace.telematics.internal / <span style="color:#ffffff;">production-live</span></span>
+                </div>
+                <div class="window-metric-tag" id="showcase-stage-metric">
+                  ₹2.47 Cr Tracked • Peak ₹82.58L/mo
                 </div>
               </div>
 
-              <!-- Right Stacked Boxes: Portal UI -->
-              <div class="gallery-sub-grid">
-                <div class="gallery-image-box gallery-sub-box" title="Click to view enlarged high-definition screenshot">
-                  <img src="assets/images/marketplace-home-showcase.png" alt="B2B Marketplace Portal Discovery Interface" loading="lazy">
-                  <div class="img-caption">
-                    <span>Shipped Marketplace Discovery &amp; Search</span>
-                    <span style="font-size:0.7rem; color:#38bdf8;">🔍 Zoom</span>
+              <!-- Interactive Tabs Bar -->
+              <div class="showcase-tabs-bar" role="tablist">
+                <button class="showcase-tab-btn active" data-img="assets/images/marketplace-sales-dashboard.png" data-caption="Monetization Sales Dashboard (₹2.47 Cr Tracked • Peak ₹82.58L Month)" data-metric="₹2.47 Cr Tracked • Peak ₹82.58L/mo" data-path="dashboard / monetization-overview">
+                  📊 Sales Dashboard
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-home-showcase.png" data-caption="Shipped Marketplace Discovery &amp; Search Portal" data-metric="AI-Assisted Search &amp; Discovery" data-path="portal / hardware-catalog-discovery">
+                  🔍 Discovery &amp; Search
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-gst-checkout.png" data-caption="GST-Ready B2B Checkout &amp; Credit Line (Juspay / QUID)" data-metric="18% GST Engine + Credit Terms" data-path="checkout / gst-tax-engine">
+                  🛒 GST Checkout
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-catalog-showcase.png" data-caption="Hardware Solutions Category Catalog (1,231 Products)" data-metric="1,231 ARAI/AIS-140 Devices" data-path="catalog / categories-grid">
+                  📦 Hardware Catalog
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-product-pricing.png" data-caption="Product Pricing &amp; Tiered Volume Slabs (BR05 4G GPS Tracker)" data-metric="Tiered Pricing: 1, 10, 100+ Slabs" data-path="products / br05-4g-specifications">
+                  💰 Volume Slabs
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-credit-line.png" data-caption="B2B Credit Line Approval - QUID ₹2,00,000 Sanctioned Limit" data-metric="Instant ₹2,00,000 B2B Credit" data-path="finance / quid-credit-approval">
+                  💳 Credit Line
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-demo-funnel.png" data-caption="Enterprise Telematics Software Solutions Grid" data-metric="Multi-Vertical Software Platform" data-path="solutions / enterprise-telematics">
+                  📱 Software Grid
+                </button>
+                <button class="showcase-tab-btn" data-img="assets/images/marketplace-fastag-module.png" data-caption="Telematics Platform Specifications &amp; Live Demo CTA Funnel" data-metric="Consultative Demo Booking" data-path="solutions / live-demo-funnel">
+                  📋 Platform Specs
+                </button>
+              </div>
+
+              <!-- Main Stage Viewport -->
+              <div class="showcase-viewport gallery-image-box" title="Click to view full-screen high-resolution screenshot">
+                <img id="showcase-stage-img" src="assets/images/marketplace-sales-dashboard.png" alt="Monetization Sales Dashboard (₹2.47 Cr Tracked • Peak ₹82.58L Month)" loading="lazy">
+                <div class="showcase-overlay-caption">
+                  <div class="showcase-caption-text" id="showcase-stage-caption">
+                    Monetization &amp; Sales Dashboard (₹2.47 Cr Tracked • Peak ₹82.58L Month)
+                  </div>
+                  <div class="showcase-zoom-hint">
+                    🔍 Click to Zoom Fullscreen
                   </div>
                 </div>
-                <div class="gallery-image-box gallery-sub-box" title="Click to view enlarged high-definition screenshot">
-                  <img src="assets/images/marketplace-gst-checkout.png" alt="B2B GST-Compliant Checkout & Credit Line" loading="lazy">
-                  <div class="img-caption">
-                    <span>GST-Ready B2B Checkout &amp; Credit Line</span>
-                    <span style="font-size:0.7rem; color:#38bdf8;">🔍 Zoom</span>
-                  </div>
+              </div>
+
+              <!-- 8-Thumbnail Filmstrip -->
+              <div class="showcase-filmstrip">
+                <div class="filmstrip-thumb active gallery-thumb-box" data-index="0" title="1. Sales Dashboard">
+                  <img src="assets/images/marketplace-sales-dashboard.png" alt="Sales Dashboard">
+                  <div class="thumb-micro-label">Dashboard</div>
                 </div>
-              </div>
-            </div>
-
-            <!-- Secondary Gallery: 5 Additional Production Screenshots (Total 8 Shipped Screens) -->
-            <div class="gallery-secondary-header">
-              <span class="gallery-secondary-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                Additional Shipped Screens (All 8 Production Views • Sanitized)
-              </span>
-              <span style="font-size:0.74rem; color:var(--accent-cyan); font-weight:600;">🔍 Click any thumbnail to expand fullscreen</span>
-            </div>
-
-            <div class="gallery-secondary-grid">
-              <div class="gallery-thumb-box" title="Click to view full screen">
-                <img src="assets/images/marketplace-catalog-showcase.png" alt="Hardware Solutions Category Catalog (1,231 Products)" loading="lazy">
-                <div class="thumb-title">Hardware Catalog (1,231 Items)</div>
-              </div>
-
-              <div class="gallery-thumb-box" title="Click to view full screen">
-                <img src="assets/images/marketplace-product-pricing.png" alt="Product Pricing & Tiered Volume Slabs (BR05 4G)" loading="lazy">
-                <div class="thumb-title">Pricing Slabs & Specs</div>
-              </div>
-
-              <div class="gallery-thumb-box" title="Click to view full screen">
-                <img src="assets/images/marketplace-credit-line.png" alt="B2B Credit Line Approval - QUID ₹2,00,000 Limit" loading="lazy">
-                <div class="thumb-title">Credit Line (QUID ₹2L Limit)</div>
-              </div>
-
-              <div class="gallery-thumb-box" title="Click to view full screen">
-                <img src="assets/images/marketplace-demo-funnel.png" alt="Enterprise Telematics Software Solutions Grid" loading="lazy">
-                <div class="thumb-title">Software Solutions Grid</div>
-              </div>
-
-              <div class="gallery-thumb-box" title="Click to view full screen">
-                <img src="assets/images/marketplace-fastag-module.png" alt="Telematics Platform Specs & Demo CTA Funnel" loading="lazy">
-                <div class="thumb-title">Platform Specs & Demo CTA</div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="1" title="2. Discovery Portal">
+                  <img src="assets/images/marketplace-home-showcase.png" alt="Discovery Portal">
+                  <div class="thumb-micro-label">Discovery</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="2" title="3. GST Checkout">
+                  <img src="assets/images/marketplace-gst-checkout.png" alt="GST Checkout">
+                  <div class="thumb-micro-label">Checkout</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="3" title="4. Hardware Catalog">
+                  <img src="assets/images/marketplace-catalog-showcase.png" alt="Hardware Catalog">
+                  <div class="thumb-micro-label">Catalog</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="4" title="5. Volume Slabs">
+                  <img src="assets/images/marketplace-product-pricing.png" alt="Volume Slabs">
+                  <div class="thumb-micro-label">Pricing</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="5" title="6. Credit Line">
+                  <img src="assets/images/marketplace-credit-line.png" alt="Credit Line">
+                  <div class="thumb-micro-label">Credit Line</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="6" title="7. Software Grid">
+                  <img src="assets/images/marketplace-demo-funnel.png" alt="Software Grid">
+                  <div class="thumb-micro-label">Solutions</div>
+                </div>
+                <div class="filmstrip-thumb gallery-thumb-box" data-index="7" title="8. Platform Specs">
+                  <img src="assets/images/marketplace-fastag-module.png" alt="Platform Specs">
+                  <div class="thumb-micro-label">Specs &amp; Demo</div>
+                </div>
               </div>
             </div>
 
