@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimatedCounters();
   initSkillsFilter();
   initCaseStudyModal();
+  initLightboxViewer();
   initContactForm();
   initClipboardHelpers();
 });
@@ -201,7 +202,7 @@ const CASE_STUDY_DATA = {
       'Partner onboarding and discovery-to-close sales enablement framework'
     ],
     links: {
-      prototype: null,
+      prototype: 'https://kinjal106.github.io/setu/',
       walkthrough: null,
       prd: null
     }
@@ -656,3 +657,66 @@ style.textContent = `
 }
 `;
 document.head.appendChild(style);
+
+/* ==========================================================================
+   7. Lightbox / Image Zoom Viewer
+   ========================================================================== */
+function initLightboxViewer() {
+  let backdrop = document.querySelector('.lightbox-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'lightbox-backdrop';
+    backdrop.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close-btn" aria-label="Close image viewer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <img class="lightbox-img" src="" alt="Enlarged preview">
+        <div class="lightbox-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+  }
+
+  const imgEl = backdrop.querySelector('.lightbox-img');
+  const captionEl = backdrop.querySelector('.lightbox-caption');
+  const closeBtn = backdrop.querySelector('.lightbox-close-btn');
+
+  function openLightbox(src, caption) {
+    imgEl.src = src;
+    captionEl.textContent = caption || '';
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+
+  // Attach click listener to all gallery image boxes
+  const boxes = document.querySelectorAll('.gallery-image-box');
+  boxes.forEach(box => {
+    box.addEventListener('click', () => {
+      const img = box.querySelector('img');
+      const caption = box.querySelector('.img-caption span')?.textContent || img.alt;
+      if (img && img.src) {
+        openLightbox(img.src, caption);
+      }
+    });
+  });
+}
+
