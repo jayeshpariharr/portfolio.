@@ -181,17 +181,17 @@ function initSkillsFilter() {
    ========================================================================== */
 const CASE_STUDY_DATA = {
   'telematics-marketplace': {
-    title: 'B2B Fleet-Telematics Marketplace (Client work)',
-    subtitle: 'Product Discovery, PRD & Reference Prototype • Uffizio Marketplace Team',
-    badge: 'B2B Fleet-Telematics Marketplace (Client work)',
-    disclaimer: 'Screens show the final marketplace design by the UI team, based on my discovery, PRD and prototype. Client-confidential details have been sanitized.',
+    title: 'B2B Fleet-Telematics Marketplace (Client confidential under NDA)',
+    subtitle: 'Business Development Manager & Product (Founding Team, 1 of 3) • Apr 2026 – Present',
+    badge: 'a B2B fleet-telematics marketplace (client confidential under NDA)',
+    disclaimer: 'Final design by the UI team, based on my discovery, PRD and prototype. Platform names, seller names and billing details are redacted under NDA.',
     problem: `
-      In the B2B fleet-telematics ecosystem, system integrators and fleet operators faced recurring friction across warranty tracking, unclear value proposition, hardware search, seller trust, and post-purchase checkout.
+      System integrators and fleet operators struggled to evaluate telematics hardware and complete B2B orders due to gaps in warranty tracking, value proposition clarity, search filtering, seller verification trust, and checkout.
     `,
     research: `
       <ul>
-        <li><strong>Customer Complaints &amp; Support Tickets:</strong> Reviewed incoming complaints and support tickets alongside discovery calls with system integrators and fleet operators to identify root friction points.</li>
-        <li><strong>Core Gaps Uncovered:</strong> Found recurring gaps in warranty tracking, value proposition clarity, search accuracy, verified seller trust, and GST-compliant checkout.</li>
+        <li><strong>Partner Discovery:</strong> Ran partner discovery with 50+ system integrators as 1 of 3 on the founding team and fed their needs into the onboarding flow and offer.</li>
+        <li><strong>Complaints &amp; Support Tickets:</strong> Reviewed customer complaints, support tickets, and discovery calls with system integrators and fleet operators; identified five core gaps across warranty tracking, value proposition, search, trust, and checkout.</li>
       </ul>
     `,
     prioritization: `
@@ -199,16 +199,16 @@ const CASE_STUDY_DATA = {
     `,
     solution: `
       <ul>
-        <li><strong>Reference Clickable Prototype:</strong> Built the first clickable prototype; the UI team used it as the reference for the final design (advanced search, Verified filter, list/card views, GST-ready checkout).</li>
+        <li><strong>First Clickable Prototype → Final UI Design:</strong> Built the first clickable prototype; the UI team used it as the reference for the final design (advanced search, Verified filter, list/card views, GST-ready checkout).</li>
         <li><strong>Post-Launch Iterations:</strong> UI refresh, AI search, improved advanced search, and a WhatsApp support bot; now scoping a warranty-tracking module.</li>
-        <li><strong>Ordering, FASTag &amp; Payment Workflows:</strong> Worked with the Bosch backend team and banking partners on ordering, FASTag, and payment workflows, guiding ground-level requirements from the Uffizio side.</li>
+        <li><strong>Ordering, FASTag &amp; Payment Workflows:</strong> Aligned ordering, FASTag, and payment workflows with hardware and banking partners.</li>
       </ul>
     `,
     metrics: `
       <ul>
-        <li><strong>Partner Onboarding:</strong> Onboarded 50+ system integrators through partner discovery calls and demos.</li>
-        <li><strong>Team Commercial Milestone:</strong> Helped the 3-person team close an INR 60 lakh deal.</li>
-        <li><strong>PRD Baseline Discipline:</strong> Established a 2-week baseline before setting targets across 12 prioritized requirements.</li>
+        <li><strong>Partner Discovery:</strong> Onboarded 50+ system integrators via discovery calls and demos.</li>
+        <li><strong>Commercial Milestone:</strong> Helped the 3-person founding team close INR 2.5 Cr (~$295K) in 4 months, including one INR 60 lakh (~$70K) deal; tracked pipeline and forecasts in HubSpot.</li>
+        <li><strong>Measurement Discipline:</strong> Set a 2-week baseline before defining KPI targets across 12 prioritized P0/P1 requirements.</li>
       </ul>
     `,
     deliverables: [
@@ -216,7 +216,7 @@ const CASE_STUDY_DATA = {
       'First clickable prototype used by the UI team as the reference for the final design',
       'Post-launch iterations: UI refresh, AI search, improved advanced search, and WhatsApp support bot',
       'Ongoing scoping for a warranty-tracking module',
-      'Partner alignment with Bosch backend team and banking partners on ordering, FASTag, and payment workflows'
+      'Alignment of ordering, FASTag, and payment workflows with hardware and banking partners'
     ],
     links: {
       prototype: null,
@@ -227,9 +227,9 @@ const CASE_STUDY_DATA = {
 
   'fireflies': {
     title: 'Commitment Cards: Fireflies.ai',
-    subtitle: 'Academic Capstone Project • 14 Days • Full 9-Step PM Framework',
-    badge: 'Product Capstone (Academic Concept)',
-    disclaimer: 'Note: This is an academic product concept & capstone created during the Airtribe AI-First PM Program. It was not launched in production.',
+    subtitle: 'Airtribe Course Capstone • 14 Days • Concept Only (No Live Pilot)',
+    badge: 'Airtribe Course Capstone (Concept Only)',
+    disclaimer: 'Note: Airtribe AI-First PM Program course project / concept prototype only — no live pilot, no real users, not launched in production.',
     problem: `Fireflies.ai automatically transcribes and extracts action items from team meetings, but sends them as an unstructured broadcast email summary with no assigned owner, status, or deadline. As a result, critical commitments get lost after meetings. Teams struggle with visibility, lack accountability, and face awkward follow-up friction. Baseline data showed that only 28% of extracted commitments reached a resolved state (done, reassigned, or dropped) within 14 days.`,
     research: `
       <ul>
@@ -268,14 +268,14 @@ const CASE_STUDY_DATA = {
     links: {
       prototype: 'https://prototype-jayeshparihar-fireflies.lovable.app/',
       walkthrough: 'https://docs.google.com/videos/d/1QSgAdmdterJbTSX83XRY1lEwKf9WvQEogKgqtLzk15k/play?usp=sharing',
-      prd: 'assets/resumes/Fireflies_Commitment_Cards_PRD.pdf'
+      prd: null
     }
   },
 
   'vitafit': {
     title: 'VitaFit: Retention Strategy & Streak Recovery',
-    subtitle: 'Product Strategy & Retention Analysis • Airtribe Program',
-    badge: 'Product Strategy Case Study',
+    subtitle: 'Airtribe Course Project • Product Strategy & Retention Concept',
+    badge: 'Airtribe Course Project (Concept)',
     disclaimer: 'Note: Academic retention case study focusing on product mechanics and behavioral psychology. No confidential user data.',
     problem: `
       In health and fitness apps, habit formation is notoriously fragile. VitaFit's retention curve showed a severe drop-off between Day 14 and Day 21—a critical window where initial motivation wanes and long-term habits are not yet solidified. Losing users here significantly hurt customer lifetime value (LTV) and organic word-of-mouth growth.
@@ -323,8 +323,8 @@ const CASE_STUDY_DATA = {
 
   'zomato': {
     title: 'Zomato: Ordering Funnel Analysis & Metrics Framework',
-    subtitle: 'Product Analytics & Funnel Optimization • Airtribe Program',
-    badge: 'Analytics & Product Metrics Case Study',
+    subtitle: 'Airtribe Course Project • Product Analytics & Funnel Concept',
+    badge: 'Airtribe Course Project (Concept)',
     disclaimer: 'Note: Synthesized product analytics exercise based on public user journeys. Does not claim access to internal confidential Zomato telemetry.',
     problem: `
       On food delivery apps, high top-of-funnel traffic often suffers from checkout abandonment and conversion leakage. The challenge was to identify which stages of the 7-stage ordering funnel leaked the highest transaction value, diagnose why drop-offs occurred, and construct an actionable metric tree to prioritize product fixes.
@@ -372,8 +372,8 @@ const CASE_STUDY_DATA = {
 
   'quickbite': {
     title: 'QuickBite: System Design & Scalability Architecture',
-    subtitle: 'System Thinking & Scalability (5K to 2M Users) • Airtribe Program',
-    badge: 'System Design & Technical Product Case Study',
+    subtitle: 'Airtribe Course Project • System Thinking (5K to 2M Users Concept)',
+    badge: 'Airtribe Course Project (Concept)',
     disclaimer: 'Note: Academic system design case study demonstrating architectural trade-offs, capacity planning, and product requirements. Not a production deployment.',
     problem: `
       A hyper-growth on-demand delivery platform needed an architectural and product scaling strategy to grow from 5,000 to 2,000,000 active daily users without premature over-engineering, while maintaining ultra-low latency for order dispatch and live driver telemetry tracking.
@@ -515,7 +515,7 @@ function initCaseStudyModal() {
     }
 
     if (!actionsHtml) {
-      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);">Client work at Uffizio (B2B Fleet-Telematics Marketplace). Detailed discovery notes and PRD walkthrough available on request.</span>`;
+      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);">Case study for a B2B fleet-telematics marketplace (client confidential under NDA). Additional walkthrough available on request.</span>`;
     }
 
     footerActions.innerHTML = actionsHtml;
@@ -782,7 +782,7 @@ function initInteractiveShowcase() {
       stageImg.alt = caption;
       if (stageCaption) stageCaption.textContent = caption;
       if (stageMetric) stageMetric.textContent = metric;
-      if (windowPath) windowPath.textContent = `B2B Fleet-Telematics Marketplace (Client work) / ${path}`;
+      if (windowPath) windowPath.textContent = `B2B Fleet-Telematics Marketplace (NDA) / ${path}`;
       stageImg.style.opacity = '1';
     }, 140);
   }

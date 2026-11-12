@@ -9,7 +9,7 @@ Welcome to your personal portfolio website! This website has been built from scr
 Your website includes:
 1. **Modern Header & Sticky Navigation**: Quick links to all sections, an "Open to Opportunities" status badge, and mobile-friendly menu.
 2. **High-Impact Hero Section**: Your name, your core positioning, your central message, dual primary action buttons (*Explore My Work* & *Let's Connect*), direct resume download buttons, and social links.
-3. **Verified Achievements & Metrics**: Animated statistics showcasing your ₹3.2 Cr marketplace contribution, 50+ onboarded system integrators, 0% churn, 17 closed enterprise deals ($58K revenue), and outbound performance. Transparent badges distinguish founding team efforts from individual execution.
+3. **Verified Achievements & Metrics**: Animated statistics showcasing your INR 2.5 Cr (~$295K) in 4 months / INR 60 lakh deal marketplace team contribution, 50+ onboarded system integrators, 17 closed enterprise deals ($58K revenue), and outbound performance (+35% qualified meetings). Transparent badges distinguish founding team efforts from individual execution.
 4. **The Sales-to-Product Bridge ("About Me")**: Tells your authentic career transition story in a natural, confident first-person voice without generic AI buzzwords, accompanied by a visual 4-step flywheel.
 5. **"Driving Business Growth Through Sales"**: An interactive timeline of your commercial experience across the B2B Marketplace founding team, Mobility Foresights, 99acres (Info Edge), and BYJU'S.
 6. **"Exploring Product Problems. Building Product Solutions"**: Highlights your Airtribe AI-First PM program and 4 in-depth case studies:
@@ -63,8 +63,7 @@ jayesh-parihar-portfolio/
     │   └── main.js              <-- Interactive features (counters, case study modals, contact form)
     └── resumes/
         ├── Jayesh_Parihar_Sales_Resume.pdf    <-- Your real B2B Sales resume
-        ├── Jayesh_Parihar_APM_Resume.pdf      <-- Your real APM resume
-        └── Fireflies_Commitment_Cards_PRD.pdf  <-- Capstone PRD document
+        └── Jayesh_Parihar_APM_Resume.pdf      <-- Your real APM resume
 ```
 
 ---
