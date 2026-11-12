@@ -181,47 +181,42 @@ function initSkillsFilter() {
    ========================================================================== */
 const CASE_STUDY_DATA = {
   'telematics-marketplace': {
-    title: 'B2B Fleet-Telematics & IoT Marketplace',
-    subtitle: 'Commercial Product Case Study • Shipped to Production (Confidential / NDA)',
-    badge: 'Live Shipped Product • ₹3.2 Cr Revenue',
-    disclaimer: 'Confidentiality Notice: This is live freelance and founding team commercial work protected under NDA. Company and platform brand names have been sanitized to protect client confidentiality.',
+    title: 'B2B Fleet-Telematics Marketplace (Client work)',
+    subtitle: 'Product Discovery, PRD & Reference Prototype • Uffizio Marketplace Team',
+    badge: 'B2B Fleet-Telematics Marketplace (Client work)',
+    disclaimer: 'Screens show the final marketplace design by the UI team, based on my discovery, PRD and prototype. Client-confidential details have been sanitized.',
     problem: `
-      In the B2B fleet-telematics and commercial IoT ecosystem, system integrators (SIs) and fleet operators faced intense procurement friction: opaque pricing with no volume slabs, fragmented hardware manufacturers with unverified compliance (AIS-140/ARAI), complex GST invoicing, and lack of credit terms. Furthermore, after meetings and partner discovery calls, recurring gaps emerged around warranty tracking, trust, and post-purchase checkout.
+      In the B2B fleet-telematics ecosystem, system integrators and fleet operators faced recurring friction across warranty tracking, unclear value proposition, hardware search, seller trust, and post-purchase checkout.
     `,
     research: `
       <ul>
-        <li><strong>Discovery Calls & Partner Feedback:</strong> Conducted 120+ daily outbound dials and dozens of discovery calls with system integrators and fleet operators to diagnose buyer friction.</li>
-        <li><strong>Support Ticket Analysis:</strong> Reviewed recurring customer complaints and support tickets; uncovered that deals stalled due to warranty ambiguity, unverified seller credibility, and manual quotation delays.</li>
-        <li><strong>Conversion Bottleneck:</strong> Identified that buyers needed instant tiered volume pricing (1-10, 11-100, 101+ units), 1-click GST-compliant invoices, and integrated B2B credit lines to close high-ticket orders without 30-day procurement lag.</li>
+        <li><strong>Customer Complaints &amp; Support Tickets:</strong> Reviewed incoming complaints and support tickets alongside discovery calls with system integrators and fleet operators to identify root friction points.</li>
+        <li><strong>Core Gaps Uncovered:</strong> Found recurring gaps in warranty tracking, value proposition clarity, search accuracy, verified seller trust, and GST-compliant checkout.</li>
       </ul>
     `,
     prioritization: `
-      On my own initiative, authored a comprehensive PRD with 12 prioritized requirements (P0/P1), user stories, and acceptance criteria. Prioritized the B2B checkout engine, GST validation, and verified seller badges as P0, while scoping warranty tracking and automated FASTag replenishment as fast-follow iterations.
+      Wrote a PRD on my own initiative: 12 prioritized requirements (P0/P1), user stories, acceptance criteria, business rules, risks, and success metrics, with a 2-week baseline set before targets.
     `,
     solution: `
       <ul>
-        <li><strong>Clickable Prototype to Shipped Design:</strong> Built the first clickable prototype myself; the engineering UI team used this exact reference to build and ship the final production marketplace.</li>
-        <li><strong>Tiered Volume Pricing Slabs:</strong> Transparent price drops per quantity tier (e.g. ₹660 -> ₹645 -> ₹630 for fleet scale) directly on product cards.</li>
-        <li><strong>GST-Ready B2B Checkout:</strong> Seamless order summary with automated 18% GST calculation, GSTIN verification, and multi-address support.</li>
-        <li><strong>Integrated Financing & Credit Line:</strong> Embedded B2B credit line (QUID / Juspay) allowing fleet managers to place bulk orders up to pre-approved credit limits.</li>
-        <li><strong>Post-Launch Iterations:</strong> Introduced AI search, improved multi-attribute filters, WhatsApp support bot, and FASTag axle-calculation workflows.</li>
+        <li><strong>Reference Clickable Prototype:</strong> Built the first clickable prototype; the UI team used it as the reference for the final design (advanced search, Verified filter, list/card views, GST-ready checkout).</li>
+        <li><strong>Post-Launch Iterations:</strong> UI refresh, AI search, improved advanced search, and a WhatsApp support bot; now scoping a warranty-tracking module.</li>
+        <li><strong>Ordering, FASTag &amp; Payment Workflows:</strong> Worked with the Bosch backend team and banking partners on ordering, FASTag, and payment workflows, guiding ground-level requirements from the Uffizio side.</li>
       </ul>
     `,
     metrics: `
       <ul>
-        <li><strong>Revenue Impact:</strong> Contributed to closing ~₹3.2 Cr in business revenue over ~6 months (1 of 3 founding team members).</li>
-        <li><strong>Largest Enterprise Deal:</strong> Closed an individual ₹66,08,000 deal (~₹66 Lakhs / TT E-Lock 7H enterprise procurement).</li>
-        <li><strong>Partner Acquisition:</strong> 50+ system integrators onboarded through consultative demos.</li>
-        <li><strong>Account Retention:</strong> 60 active customer accounts supported with 0 cancellations (0% churn).</li>
-        <li><strong>A/B Testing:</strong> Ran weekly messaging tests yielding a 35% lift in qualified meetings and 6% lift in reply rates.</li>
+        <li><strong>Partner Onboarding:</strong> Onboarded 50+ system integrators through partner discovery calls and demos.</li>
+        <li><strong>Team Commercial Milestone:</strong> Helped the 3-person team close an INR 60 lakh deal.</li>
+        <li><strong>PRD Baseline Discipline:</strong> Established a 2-week baseline before setting targets across 12 prioritized requirements.</li>
       </ul>
     `,
     deliverables: [
-      'Self-initiated PRD covering 12 prioritized functional requirements (P0/P1)',
-      'First clickable prototype used as the reference by engineering UI team',
-      'Production-shipped B2B marketplace: catalog, bulk slabs, GST checkout, credit line',
-      'Monetization Sales Dashboard tracking ~₹53L/month run-rate and category revenue',
-      'Partner onboarding and discovery-to-close sales enablement framework'
+      'Self-initiated PRD: 12 prioritized requirements (P0/P1), user stories, acceptance criteria, business rules, risks, and success metrics',
+      'First clickable prototype used by the UI team as the reference for the final design',
+      'Post-launch iterations: UI refresh, AI search, improved advanced search, and WhatsApp support bot',
+      'Ongoing scoping for a warranty-tracking module',
+      'Partner alignment with Bosch backend team and banking partners on ordering, FASTag, and payment workflows'
     ],
     links: {
       prototype: null,
@@ -444,12 +439,16 @@ function initCaseStudyModal() {
   });
 
   function openModal() {
+    modalBackdrop.removeAttribute('hidden');
+    modalBackdrop.setAttribute('aria-hidden', 'false');
     modalBackdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     modalBackdrop.classList.remove('open');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
+    modalBackdrop.setAttribute('hidden', '');
     document.body.style.overflow = '';
   }
 
@@ -516,7 +515,7 @@ function initCaseStudyModal() {
     }
 
     if (!actionsHtml) {
-      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Work conducted under Non-Disclosure Agreement (NDA). Detailed workflows and specs available upon discussion.</span>`;
+      actionsHtml = `<span style="font-size:0.85rem; color:var(--text-muted);">Client work at Uffizio (B2B Fleet-Telematics Marketplace). Detailed discovery notes and PRD walkthrough available on request.</span>`;
     }
 
     footerActions.innerHTML = actionsHtml;
@@ -750,7 +749,7 @@ function initLightboxViewer() {
 }
 
 /* ==========================================================================
-   8. Apple-Style Interactive 8-Screen Showcase Switcher
+   8. Interactive 6-Screen Showcase Switcher
    ========================================================================== */
 function initInteractiveShowcase() {
   const tabs = document.querySelectorAll('.showcase-tab-btn');
@@ -775,7 +774,7 @@ function initInteractiveShowcase() {
     const src = tab.getAttribute('data-img');
     const caption = tab.getAttribute('data-caption');
     const metric = tab.getAttribute('data-metric');
-    const path = tab.getAttribute('data-path') || 'production-live';
+    const path = tab.getAttribute('data-path') || 'home';
 
     stageImg.style.opacity = '0';
     setTimeout(() => {
@@ -783,7 +782,7 @@ function initInteractiveShowcase() {
       stageImg.alt = caption;
       if (stageCaption) stageCaption.textContent = caption;
       if (stageMetric) stageMetric.textContent = metric;
-      if (windowPath) windowPath.innerHTML = `marketplace.telematics.internal / <span style="color:#ffffff;">${path}</span>`;
+      if (windowPath) windowPath.textContent = `B2B Fleet-Telematics Marketplace (Client work) / ${path}`;
       stageImg.style.opacity = '1';
     }, 140);
   }
